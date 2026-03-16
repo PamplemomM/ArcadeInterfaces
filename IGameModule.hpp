@@ -26,6 +26,12 @@ class IGameModule
     protected:
     public:
         virtual ~IGameModule() = default;
+
+        virtual int loadAssets() = 0;
+        virtual int destroyAssets() = 0;
+
+        virtual bool isOpen() = 0;
+        virtual void updateGame() = 0;
 };
 
 #endif
